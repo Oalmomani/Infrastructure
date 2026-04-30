@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Status</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Server Status Dashboard</h1>
+  <p class="subtitle">Managed by DevOps Team</p>
+
+  <div class="grid">
+    <div class="card up">
+      <span class="dot"></span>
+      <strong>Web Server 01</strong>
+      <small>192.168.1.10</small>
+      <span class="status">Online</span>
+    </div>
+    <div class="card up">
+      <span class="dot"></span>
+      <strong>Database Server</strong>
+      <small>192.168.1.20</small>
+      <span class="status">Online</span>
+    </div>
+    <div class="card down">
+      <span class="dot"></span>
+      <strong>Backup Server</strong>
+      <small>192.168.1.30</small>
+      <span class="status">Offline</span>
+    </div>
+    <div class="card up">
+      <span class="dot"></span>
+      <strong>AD Server</strong>
+      <small>192.168.1.40</small>
+      <span class="status">Online</span>
+    </div>
+  </div>
+
+  <footer>Last updated: <span id="ts"></span></footer>
+  <script>
+    document.getElementById('ts').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
